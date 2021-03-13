@@ -1,38 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .App {
+  height: 100vh;
+  width: 100%;
+  background: #dee2ff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.form-wrapper {
+  background: #ffffff;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 10px 50px #feeafa;
+  border-radius: 8px;
+  padding: 1rem 2rem;
+}
+form {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+h1 {
   text-align: center;
+  width: 100%;
+  font-weight: lighter;
+  color: #3f37c9;
+  margin-bottom: 1rem;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+label {
+  font-size: 1.2rem;
+  color: #003049;
+  margin-bottom: 0.8rem;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+input {
+  outline: none;
+  border-radius: 5px;
+  padding: 0.5rem;
+  border: 1px solid#dee2ff;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+input::placeholder {
+  font-size: 1rem;
+  font-weight: lighter;
+  color: #a39fe2;
+}
+input.error {
+  border: 1px solid red;
+}
+.errorMessage {
+  color: red;
+  font-size: 0.8rem;
+  display: relative;
+}
+.firstName {
+  margin-right: 1%;
+}
+.lastName {
+  margin-left: 1%;
+}
+.firstName,
+.lastName,
+.email,
+.password {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+.firstName,
+.lastName {
+  width: 48%;
+}
+.email,
+.password {
+  width: 100%;
+}
+.createAccount {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
+button {
+  width: 98%;
+  padding: 1rem;
+  background: darkblue;
+  color: #ffffff;
+  font-weight: lighter;
+  font-size: 1rem;
+  outline: none;
+  border: 1px solid #003049;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+button:hover {
+  color: darkblue;
+  background: #ffffff;
+}
+small {
+  padding: 0.5rem;
+  font-weight: normal;
+  color: #3f37c9;
+}
+@media only screen and (max-width: 600px) {
+  .form-wrapper {
+    width: 90%;
   }
-  to {
-    transform: rotate(360deg);
+}
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+  .form-wrapper {
+    width: 70%;
   }
 }
